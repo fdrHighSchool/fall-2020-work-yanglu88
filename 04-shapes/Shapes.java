@@ -5,7 +5,7 @@ public class Shapes {
     areaTriangle();
     areaCircle();
     areaTrapezoid();
-
+  
   }//end main method
 
   public static void areaRectangle(){
@@ -40,7 +40,7 @@ public class Shapes {
 
   }//end areaTriangle
 
-  public static void areaCircle(){ 
+  public static void areaCircle(){
     Scanner input = new Scanner(System.in);
     int radius = 0;
     double pi = 3.1415926;
@@ -72,6 +72,7 @@ public class Shapes {
     System.out.println("The area of the trapezoid is: " + areaTrapezoid);
 
   }//end areaTrapezoid
+
 
 
 }//end class
