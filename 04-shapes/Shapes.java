@@ -5,7 +5,11 @@ public class Shapes {
     areaTriangle();
     areaCircle();
     areaTrapezoid();
-  
+    volumeCube();
+    volumeTrianglularPrism();
+    volumeRectangularPrism();
+    volumeSphere();
+
   }//end main method
 
   public static void areaRectangle(){
@@ -71,8 +75,75 @@ public class Shapes {
     double areaTrapezoid = (base1 + base2)/2.0 * height;
     System.out.println("The area of the trapezoid is: " + areaTrapezoid);
 
+
   }//end areaTrapezoid
 
+  public static void volumeCube(){
+    Scanner input = new Scanner(System.in);
+    double length = 0;
+
+    System.out.print("The length of the side of the cube is: ");
+    length = input.nextDouble();
+
+    double volumeCube = length * length * length;
+    System.out.println("The volume of the cube is: " + volumeCube);
+
+  }//end volumeCube
+
+  public static void volumeTrianglularPrism(){
+    Scanner input = new Scanner(System.in);
+    double length = 0;
+    double height = 0;
+    double base = 0;
+
+    System.out.print("The length of the triangular prism is: ");
+    length = input.nextDouble();
+
+    System.out.print("The height of the triangular prism is: ");
+    height = input.nextDouble();
+
+    System.out.print("The base of the triangular prism is: ");
+    base = input.nextDouble();
+
+    double volumeTrianglularPrism =  ( base * height * length ) / 2;
+
+    System.out.println("The volume of the triangular prism is: " + volumeTrianglularPrism );
+
+  }//end volumeTrianglularPrism
+
+  public static void volumeRectangularPrism(){
+    Scanner input = new Scanner(System.in);
+    double width = 0;
+    double length = 0;
+    double height = 0;
+
+    System.out.print("The width of the rectangular prism is: ");
+    width = input.nextDouble();
+
+    System.out.print("The length of the rectangular prism is: ");
+    length = input.nextDouble();
+
+    System.out.print("The height of the rectangular prism is: ");
+    height = input.nextDouble();
+
+    double volumeRectangularPrism = length * width * height;
+    System.out.println("The volume of the rectangular prism is:" + volumeRectangularPrism);
+
+
+  }//end volumeRectangularPrism
+
+  public static void volumeSphere(){
+    Scanner input = new Scanner(System.in);
+    double radius = 0;
+    double pi = 3.1415926;
+
+    System.out.print("The radius of the sphere is: ");
+    radius = input.nextDouble();
+
+    double volumeSphere = (4.0/3) * pi * radius * radius * radius;
+    System.out.print("The volume of the sphere is: " + volumeSphere);
+
+  }//end volumeSphere
 
 
 }//end class
