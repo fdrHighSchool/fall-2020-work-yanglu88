@@ -6,7 +6,7 @@ public class Temperature{
 
 
     System.out.print("What is the temperature in degrees Celsius: ");
-    temperature += in.nextInt();
+    temperature += in.nextDouble();
 
     double newTemperature = (temperature* 9 / 5) + 32;
 
