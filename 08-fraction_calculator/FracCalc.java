@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class FracCalc {
 
     /**
@@ -5,6 +6,12 @@ public class FracCalc {
      * @param args - unused
      */
     public static void main(String[] args){
+      Scanner input = new Scanner(System.in);
+      System.out.print("Enter fractions to calculate: ");
+      String equation = input.nextLine();
+      String solution = produceAnswer(equation);
+      System.out.print(solution);
+
         // TODO: Read the input from the user and call produceAnswer with an equation
         // Checkpoint 1: Create a Scanner, read one line of input, pass that input to produceAnswer, print the result.
         // Checkpoint 2: Accept user input multiple times.
@@ -18,6 +25,16 @@ public class FracCalc {
      *      Example: return ==> "1_1/4"
      */
     public static String produceAnswer(String input){
+      int space = input.indexOf(" ");
+      int last = input.length();
+      String op1 = input.substring(0, space);
+      String op = input.substring(space + 1, space + 2);
+      String op2 = input.substring(space + 3, last);
+      System.out.println(op1);
+      System.out.println(op);
+      System.out.println(op2);
+      return op2;
+
         // TODO: Implement this function to produce the solution to the input
         // Checkpoint 1: Return the second operand.  Example "4/5 * 1_2/4" returns "1_2/4".
         // Checkpoint 2: Return the second operand as a string representing each part.
@@ -28,7 +45,7 @@ public class FracCalc {
         // Final project: All answers must be reduced.
         //               Example "4/5 * 1_2/4" returns "1_1/5".
 
-        return "";
+
     }//end produceAnswer method
 
     // TODO: Fill in the space below with helper methods
@@ -41,7 +58,7 @@ public class FracCalc {
      * @return The GCD.
      */
     public static int greatestCommonDivisor(int a, int b){
-
+      return 0;
     }//end greatestCommonDivisor method
 
     /**
@@ -52,7 +69,7 @@ public class FracCalc {
      * @return The LCM.
      */
     public static int leastCommonMultiple(int a, int b){
-
+      return 0;
     }//end leastCommonMultiple
 
 }//end class
